@@ -4,14 +4,17 @@ public class StringBufferBuilderExamples {
 	public static void main(String[] args) {
 		// StringBuffer and StringBuilder are used when you want to modify
 		// object values.
-		StringBuffer stringbuffer = new StringBuffer("12345");
-		stringbuffer.append("6789");
+		StringBuffer stringbuffer = new StringBuffer("Never Gonna");
+		stringbuffer.append(" Give You Up");
 		System.out.println(stringbuffer); // 123456789
 		// All StringBuffer methods modify the value of the object.
+		System.out.println(stringbuffer.delete(11, 23));
 
-		StringBuilder sb = new StringBuilder("0123456789");
+		StringBuilder sb = new StringBuilder(" Let You Down");
+		stringbuffer.append(sb);
+		System.out.println(stringbuffer);
 		// StringBuilder delete(int startIndex, int endIndexPlusOne)
-		System.out.println(sb.delete(3, 7));// 012789
+		
 
 		StringBuilder sb1 = new StringBuilder("abcdefgh");
 		// StringBuilder insert(int indext, String whatToInsert)
